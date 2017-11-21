@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/viewBg"
+    tools:context="com.example.mkany.movieapp.DetailActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/release"
+            android:layout_marginLeft="@dimen/layout_margin_left"
+            android:text="@string/release"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/user_rating" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/release_date"
+            android:paddingBottom="@dimen/padding_layout"
+            android:paddingTop="5dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_below="@+id/release" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/plot"
+            android:layout_marginLeft="@dimen/layout_margin_left"
+            android:text="@string/plot"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/plotsyn"
+            android:layout_marginLeft="@dimen/layout_margin_left"
+            android:paddingLeft="@dimen/padding_layout"
+            android:paddingBottom="@dimen/padding_layout"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/plot"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating"
+            android:layout_marginLeft="@dimen/layout_margin_left"
+            android:text="@string/rating"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/plotsyn" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_below="@+id/rating"
+            android:stepSize="0.1"
+            android:paddingBottom="@dimen/padding_layout"
+            android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:isIndicator="true"
+            style="?attr/ratingBarStyle"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
